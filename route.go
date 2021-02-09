@@ -1,5 +1,24 @@
 package dgrouter
 
+type ArgumentType int
+
+const (
+    StringArg ArgumentType = iota
+    IntegerArg
+    FloatArg
+    UserArg
+    RoleArg
+    ChannelArg
+)
+
+//Argument used for automatic validation
+type Argument struct {
+    Name        string
+    Description string
+    Required    bool
+    Type        ArgumentType
+}
+
 // Route is a command route
 type Route struct {
 	// Routes is a slice of subroutes
@@ -7,6 +26,8 @@ type Route struct {
 
 	Name        string
 	Aliases     []string
+    Args        []Argument
+    Examples    []string
 	Description string
 	Category    string
 
@@ -43,4 +64,14 @@ func (r *Route) Cat(category string) *Route {
 func (r *Route) Alias(aliases ...string) *Route {
 	r.Aliases = append(r.Aliases, aliases...)
 	return r
+}
+
+func (r *Route) Example(examples ...string) *Route {
+    r.Examples = append(r.Examples, examples...)
+    return r
+}
+
+func (r *Route) Arg(name string, description string, required bool, argType ArgumentType) *Route {
+    r.Args = append(r.Args, Argument { Name: name, Description: description, Required: required,  Type: argType })
+    return r
 }
