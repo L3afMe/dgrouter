@@ -4,8 +4,8 @@ import (
 	"log"
 	"testing"
 
-	"github.com/Necroforger/dgrouter"
-	"github.com/Necroforger/dgrouter/exrouter"
+	"github.com/L3afMe/dgrouter"
+	"github.com/L3afMe/dgrouter/exrouter"
 	"github.com/bwmarrin/discordgo"
 )
 
@@ -56,7 +56,7 @@ func TestRouter(t *testing.T) {
 		// Construct mock message
 		msg := &discordgo.Message{
 			Author: &discordgo.User{
-				Username: "necroforger",
+				Username: "L3afMe",
 				Bot:      false,
 			},
 			Content: v,

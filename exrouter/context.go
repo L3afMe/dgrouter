@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/Necroforger/dgrouter"
+	"github.com/L3afMe/dgrouter"
 
 	"github.com/bwmarrin/discordgo"
 )

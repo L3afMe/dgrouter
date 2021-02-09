@@ -5,8 +5,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/Necroforger/dgrouter/exmiddleware"
-	"github.com/Necroforger/dgrouter/exrouter"
+	"github.com/L3afMe/dgrouter/exmiddleware"
+	"github.com/L3afMe/dgrouter/exrouter"
 	"github.com/bwmarrin/discordgo"
 )
 
@@ -18,7 +18,7 @@ var (
 
 // AllowedNames are names allowed to use the auth commands
 var AllowedNames = []string{
-	"necroforger",
+	"L3afMe",
 	"necro",
 
 	"foxtail-grass-studios",
